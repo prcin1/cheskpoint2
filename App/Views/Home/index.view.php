@@ -7,12 +7,6 @@
 <body>
 
 <div id="carouselExampleCaptions" class="carousel slide top">
-    <div class="carousel-indicators top">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-
     <div class="carousel-inner " role="listbox" style=" width:100%; height: 600px ;">
         <div class="carousel-item active ">
             <img src= public/images/01.jpg class="d-block velkostObrazka" alt="1">
@@ -37,6 +31,11 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
     </button>
+        <div class="carousel-indicators" style="bottom: 10px">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
 </div>
 
 <h1 class="title">Vyberte si vašu aktivitu! </h1>
@@ -52,7 +51,6 @@
         </div>
     <?php endforeach; ?>
 </div>
-
 
 </body>
 </html>

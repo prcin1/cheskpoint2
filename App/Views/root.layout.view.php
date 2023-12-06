@@ -25,9 +25,7 @@
 </head>-->
 
 <head>
-    <meta charset="UTF-8">
     <title>T&M</title>
-    <link rel="stylesheet" href="../CSS/Styl.css">
 </head>
 
 <body>
@@ -61,7 +59,7 @@
 
 <nav class="navbar navbar-expand-sm navbar-transparent bg-transparent" aria-label="Third navbar example">
     <div class="container-fluid">
-        <a class="navbar-brand " href=<?php  $link->url("home.index") ?>>Mastodontný obchod</a>
+        <a class="navbar-brand " href="index.php?c=home" >Mastodontný obchod</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -96,7 +94,7 @@
 </div>
 <footer class="py-3 my-4">
     <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-        <li class="nav-item"><a href="Uvod.html" class="nav-link px-2 text-body-secondary">Domov</a></li>
+        <li class="nav-item"><a href="index.php?c=home" class="nav-link px-2 text-body-secondary">Domov</a></li>
         <li class="nav-item"><a href="Onas.html" class="nav-link px-2 text-body-secondary">O nás</a></li>
         <li class="nav-item"><a href="Predajne.html" class="nav-link px-2 text-body-secondary">Predajne/Kontakt</a></li>
     </ul>

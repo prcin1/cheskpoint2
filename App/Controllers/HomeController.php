@@ -99,7 +99,8 @@ class HomeController extends AControllerBase
             $prod->setCena($_POST['price']);
             $prod->save();
 
-            header('Location: index.php?c=home&a=products&id='.$prod->getDruh_id());
+            //header('Location: index.php?c=home&a=products&id='.$prod->getDruh_id());
+            header('Location: index.php');
             exit;
         }
 
