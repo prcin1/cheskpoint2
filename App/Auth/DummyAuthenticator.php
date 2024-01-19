@@ -3,6 +3,7 @@
 namespace App\Auth;
 
 use App\Core\IAuthenticator;
+use App\Models\users;
 
 /**
  * Class DummyAuthenticator
@@ -32,8 +33,17 @@ class DummyAuthenticator implements IAuthenticator
      */
     public function login($login, $password): bool
     {
-        if ($login == self::LOGIN && password_verify($password, self::PASSWORD_HASH)) {
-            $_SESSION['user'] = self::USERNAME;
+
+        $user = users::getAll(" login = ?", [$login]);
+        //echo $user[0]->getLogin();
+        if($user == null){
+            return false;
+        }
+        echo password_hash($login, PASSWORD_DEFAULT);
+        echo $user[0]->getPassword();
+        if ($login == $user[0]->getLogin() && password_verify($password, $user[0]->getPassword())) {
+            $_SESSION['user'] = $user[0]->getId();
+            $_SESSION['role'] = $user[0]->getRoleId();
             return true;
         } else {
             return false;
@@ -47,6 +57,7 @@ class DummyAuthenticator implements IAuthenticator
     {
         if (isset($_SESSION["user"])) {
             unset($_SESSION["user"]);
+            unset($_SESSION["role"]);
             session_destroy();
         }
     }
@@ -86,5 +97,15 @@ class DummyAuthenticator implements IAuthenticator
     public function getLoggedUserId(): mixed
     {
         return $_SESSION['user'];
+    }
+
+
+    /**
+     * Return if the user is authenticated or not
+     * @return bool
+     */
+    public function getUserRole(): int
+    {
+        return isset($_SESSION['role']) ? (int)$_SESSION['role'] : 0;
     }
 }

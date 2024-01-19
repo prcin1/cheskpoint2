@@ -3,6 +3,7 @@
 $layout = 'auth';
 /** @var Array $data */
 /** @var \App\Core\LinkGenerator $link */
+//print_r($data['message']);exit();
 ?>
 
 <div class="container">
@@ -27,6 +28,7 @@ $layout = 'auth';
                         <div class="text-center">
                             <button class="btn btn-primary" type="submit" name="submit">Prihlásiť
                             </button>
+                            <a href="<?= $link->url("Auth.register") ?>">Registrovať</a>
                         </div>
                     </form>
                 </div>

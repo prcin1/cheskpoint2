@@ -2,6 +2,7 @@
 
 <?php
 /** @var Array $data */
+/** @var \App\Core\IAuthenticator $auth */
 //print_r($data["tps"]);exit();
 ?>
 <link rel="stylesheet" href="/public/css/Home/products.css">
@@ -26,23 +27,30 @@
                 <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                     <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Prejsť na detail</a></div>
                 </div>
-                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="index.php?c=home&a=edit&id=<?= $product["id"] ?>">Upravit</a></div>
-                </div>
-                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                    <div class="text-center">
-                        <button class="btn btn-outline-dark mt-auto" id="btn_delete_<?= $product["id"] ?>" onclick="deleteProduct(<?= $product["id"] ?>)">
-                            Zmazať
-                        </button>
+                <?php if($auth->getUserRole() == 1): ?>
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="index.php?c=home&a=edit&id=<?= $product["id"] ?>">Upravit</a></div>
                     </div>
-                </div>
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center">
+                            <button class="btn btn-outline-dark mt-auto" id="btn_delete_<?= $product["id"] ?>" onclick="deleteProduct(<?= $product["id"] ?>)">
+                                Zmazať
+                            </button>
+                        </div>
+                    </div>
+                <?php endif; ?>
+
             </div>
         </div>
         <?php endforeach; ?>
 
-        <a href="index.php?c=home&a=add">
-            <button class="btn btn-warning px-3 center"  type="button">Pridať</button>
-        </a>
+        <?php if($auth->getUserRole() == 1): ?>
+            <a href="index.php?c=home&a=add">
+                <button class="btn btn-warning px-3 center"  type="button">Pridať</button>
+            </a>
+        <?php endif; ?>
+
+
 
         <script src="/public/js/delete.js"></script>
 

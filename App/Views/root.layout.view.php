@@ -29,33 +29,6 @@
 </head>
 
 <body>
-<!--<nav class="navbar navbar-expand-sm bg-light">-->
-<!--    <div class="container-fluid">-->
-<!--        <a class="navbar-brand" href="--><?php //= $link->url("home.index") ?><!--">-->
-<!--            <img src="public/images/vaiicko_logo.png" title="--><?php //= \App\Config\Configuration::APP_NAME ?><!--"-->
-<!--                 title="--><?php //= \App\Config\Configuration::APP_NAME ?><!--">-->
-<!--        </a>-->
-<!--        <ul class="navbar-nav me-auto">-->
-<!--            <li class="nav-item">-->
-<!--                <a class="nav-link" href="--><?php //= $link->url("home.contact") ?><!--">Kontakt</a>-->
-<!--            </li>-->
-<!--        </ul>-->
-<!--        --><?php //if ($auth->isLogged()) { ?>
-<!--            <span class="navbar-text">Prihlásený používateľ: <b>--><?php //= $auth->getLoggedUserName() ?><!--</b></span>-->
-<!--            <ul class="navbar-nav ms-auto">-->
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link" href="--><?php //= $link->url("auth.logout") ?><!--">Odhlásenie</a>-->
-<!--                </li>-->
-<!--            </ul>-->
-<!--        --><?php //} else { ?>
-<!--            <ul class="navbar-nav ms-auto">-->
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link" href="--><?php //= \App\Config\Configuration::LOGIN_URL ?><!--">Prihlásenie</a>-->
-<!--                </li>-->
-<!--            </ul>-->
-<!--        --><?php //} ?>
-<!--    </div>-->
-<!--</nav>-->
 
 <nav class="navbar navbar-expand-sm navbar-transparent bg-transparent" aria-label="Third navbar example">
     <div class="container-fluid">
@@ -75,10 +48,16 @@
             </ul>
             <ul class="navbar-nav mb-2 mb-sm-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Košík <i class="bi bi-basket"></i></a>
+                    <?php if($auth->isLogged()): ?>
+                        <a class="nav-link" href="#">Košík <i class="bi bi-basket"></i></a>
+                    <?php endif; ?>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Login.html" >Prihlásiť <i class="bi bi-person-fill"></i></a>
+                    <?php if ($auth->isLogged()) { ?>
+                        <a class="nav-link" href="index.php?c=Auth&a=logout" >Odhlásiť<i class="bi bi-person-fill"></i></a>
+                    <?php } else { ?>
+                        <a class="nav-link" href="index.php?c=Auth&a=login" >Prihlásiť<i class="bi bi-person-fill"></i></a>
+                    <?php } ?>
                 </li>
             </ul>
             <form role="search">
