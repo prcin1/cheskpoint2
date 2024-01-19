@@ -1,0 +1,7 @@
+.about-us {
+    max-width: 800px; /* Nastavte maximálnu šírku podľa potreby */
+    margin: 0 auto; /* Centruje element na stránke */
+    padding: 20px; /* Odsadenie od okrajov */
+    border: 1px solid black; /* Rám okolo obsahu */
+    border-radius: 10px; /* Zaoblené rohy */
+}

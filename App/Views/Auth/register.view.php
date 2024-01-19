@@ -5,7 +5,7 @@ $layout = 'auth';
 /** @var \App\Core\LinkGenerator $link */
 //print_r($data['message']);exit();
 ?>
-
+<link rel="stylesheet" href="/public/css/Auth/register.css">
 
 <form method="post" action="<?= $link->url("register") ?>">
     <div class="container">
@@ -27,6 +27,10 @@ $layout = 'auth';
 
         <div class="clearfix">
             <button type="submit" class="signup" name="register">Registrovať sa</button>
+        </div>
+        <div class="mt-41">
+            <a href="<?= $link->url("Home.index") ?>" class="text-gold-50 fw-bold">Späť</a>
+            </p>
         </div>
     </div>
 </form>

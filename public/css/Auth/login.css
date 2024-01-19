@@ -1,0 +1,44 @@
+
+body {
+    background-color: #f8f9fa; /* farba pozadia */
+}
+
+/* Štýly pre karty */
+.card {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* tiene karty */
+    max-height: 600px;
+}
+
+/* Štýly pre formulár */
+.form-signin {
+    max-width: 400px; /* maximálna šírka formulára */
+    margin: 0 auto; /* centrování formulára */
+}
+
+/* Štýly pre tlačidlá */
+.btn-outline-light {
+    color: #f8f9fa; /* farba textu */
+    border-color: #f8f9fa; /* farba ohraničenia */
+}
+
+.btn-outline-light:hover {
+    color: #212529; /* farba textu po najazdení myšou */
+    background-color: #f8f9fa; /* farba pozadia po najazdení myšou */
+}
+
+/* Štýly pre odkazy */
+a {
+    color: #0772ff; /* farba odkazov */
+}
+
+a:hover {
+    color: #0066ff; /* farba odkazov po najazdení myšou */
+}
+.mt-4 {
+    position: absolute;
+    bottom: 10px; /* Prispôsobte podľa potreby, aby odkaz bol od spodu */
+    left: 50%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    color: #fdfdfd; /* Farba odkazu */
+}

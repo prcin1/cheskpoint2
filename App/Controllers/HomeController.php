@@ -1,14 +1,9 @@
 <?php
 
 namespace App\Controllers;
-
-use App\Classes\FlashMessage;
 use App\Core\AControllerBase;
 use App\Core\Responses\Response;
-use App\Models\carousel;
-use App\Models\ModelRecipeTypes as RecipeTypeModel;
 use App\Models\products;
-use App\Models\ModelRecipes as RecipeModel;
 use App\Models\types;
 
 /**
@@ -76,7 +71,7 @@ class HomeController extends AControllerBase
             $newProduct->setCena($_POST['price']);
             $newProduct->save();
 
-            header('Location: index.php');
+            header('Location: index.php?c=home&a=products&id='.$newProduct->getDruh_id());
             exit;
         }
         return $this->html(["tps" => $tps]);
@@ -99,8 +94,7 @@ class HomeController extends AControllerBase
             $prod->setCena($_POST['price']);
             $prod->save();
 
-            //header('Location: index.php?c=home&a=products&id='.$prod->getDruh_id());
-            header('Location: index.php');
+            header('Location: index.php?c=home&a=products&id='.$prod->getDruh_id());
             exit;
         }
 
@@ -131,4 +125,5 @@ class HomeController extends AControllerBase
     {
         return $this->html();
     }
+
 }

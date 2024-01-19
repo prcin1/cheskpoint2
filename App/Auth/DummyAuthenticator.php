@@ -35,12 +35,9 @@ class DummyAuthenticator implements IAuthenticator
     {
 
         $user = users::getAll(" login = ?", [$login]);
-        //echo $user[0]->getLogin();
         if($user == null){
             return false;
         }
-        echo password_hash($login, PASSWORD_DEFAULT);
-        echo $user[0]->getPassword();
         if ($login == $user[0]->getLogin() && password_verify($password, $user[0]->getPassword())) {
             $_SESSION['user'] = $user[0]->getId();
             $_SESSION['role'] = $user[0]->getRoleId();

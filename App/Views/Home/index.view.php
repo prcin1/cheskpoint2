@@ -3,40 +3,44 @@
 //print_r($data["tps"]);exit();
 ?>
 <link rel="stylesheet" href="/public/css/Home/index.css">
+<script src="/public/js/Carousel.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <title>Bootstrap Carousel</title>
+</head>
 
 <body>
 
-<div id="carouselExampleCaptions" class="carousel slide top">
-    <div class="carousel-inner " role="listbox" style=" width:100%; height: 600px ;">
-        <div class="carousel-item active ">
-            <img src= public/images/01.jpg class="d-block velkostObrazka" alt="1">
-            <div class="carousel-caption d-none d-md-block top ">
+<div id="carouselExampleCaptions" class="carousel slide carousel-fade top" data-ride="carousel">
+    <div class="carousel-inner" role="listbox" style="width:100%; height: 600px;">
+        <div class="carousel-item active">
+            <img src="public/images/01.jpg" class="d-block velkostObrazka" alt="1">
+            <div class="carousel-caption d-none d-md-block top">
+                <!-- Vaša obsah slide -->
             </div>
+        </div>
+        <div class="carousel-item">
+            <img src="public/images/02.jpg" class="d-block velkostObrazka" alt="2">
+            <div class="carousel-caption d-none d-md-block">
+                <!-- Vaša obsah slide -->
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="public/images/03.jpg" class="d-block velkostObrazka" alt="3">
+            <div class="carousel-caption d-none d-md-block">
+                <!-- Vaša obsah slide -->
+            </div>
+        </div>
     </div>
-        <div class="carousel-item">
-            <img src="public/images/02.jpg" class="d-block velkostObrazka" alt="1">
-            <div class="carousel-caption d-none d-md-block">
-            </div>
-        </div>
-        <div class="carousel-item">
-            <img src="public/images/03.jpg" class="d-block velkostObrazka" alt="1">
-            <div class="carousel-caption d-none d-md-block">
-            </div>
-        </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
-        <div class="carousel-indicators" style="bottom: 10px">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
 </div>
+<!-- jQuery, Popper.js, Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 <h1 class="title">Vyberte si vašu aktivitu! </h1>
 

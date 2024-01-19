@@ -1,0 +1,33 @@
+body {
+    background-color: #ffffff; /* Čierne pozadie */
+    color: #0066ff; /* Biele písmo */
+}
+
+.card-signout {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); /* Biela tiene */
+    border-radius: 1rem;
+    width: 100%;
+    height: 400px;
+    min-width: 400px;
+    background-color: #0e0d0d; /* Čierne pozadie karty */
+    margin: 0 auto;
+
+}
+
+.card-signout .card-body {
+    padding: 5rem;
+    color: white;
+}
+
+.lead{
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.card-signout a {
+    color: #0756ff; /* Žltá farba pre odkazy */
+}
+
+.card-signout a:hover {
+    color: #ff8c00;
+}
