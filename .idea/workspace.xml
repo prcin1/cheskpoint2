@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e649dd98-dd52-438c-af58-6d7ecb99e7b1" name="Changes" comment="dorobenie malickost">
+      <change beforePath="$PROJECT_DIR$/App/Controllers/AboutUsController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controllers/AuthController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Views/AboutUs/aboutUs.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Home/aboutUs.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Views/Home/shops.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Home/shops.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Views/root.layout.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/root.layout.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/Carousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/Carousel.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "prcin1"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="c942be22-fe16-4613-8721-323a0268910a" />
+        <option name="url" value="https://github.com/prcin1/cheskpoint2.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
+  <component name="PhpServers">
+    <servers>
+      <server host="localhost" id="c27a1612-2880-4d72-83fc-81ab4b183f83" name="localhost" use_path_mappings="true">
+        <path_mappings>
+          <mapping local-root="$PROJECT_DIR$" remote-root="/var/www/html" />
+        </path_mappings>
+      </server>
+    </servers>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2ZAOmWK6WpzmcUbCPfIWHBeYbn6" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/PC/PhpstormProjects/cheskpoint2/App/Views/Home",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\PC\PhpstormProjects\cheskpoint2\App\Views\Home" />
+      <recent name="C:\Users\PC\PhpstormProjects\cheskpoint2\public\css\Home" />
+      <recent name="C:\Users\PC\PhpstormProjects\cheskpoint2\public\js" />
+      <recent name="C:\Users\PC\PhpstormProjects\cheskpoint2\public\css\Auth" />
+      <recent name="C:\Users\PC\PhpstormProjects\cheskpoint2\public\css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\PC\PhpstormProjects\cheskpoint2\App\Views\Home" />
+      <recent name="C:\Users\PC\PhpstormProjects\cheskpoint2\App\Views\AboutUs" />
+      <recent name="C:\Users\PC\PhpstormProjects\cheskpoint2\App\Views" />
+      <recent name="C:\Users\PC\PhpstormProjects\cheskpoint2\public\images" />
+      <recent name="C:\Users\PC\PhpstormProjects\cheskpoint2\public\css\Auth" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="docker: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.docker: Compose Deployment" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e649dd98-dd52-438c-af58-6d7ecb99e7b1" name="Changes" comment="" />
+      <created>1701861578231</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1701861578231</updated>
+      <workItem from="1701861583851" duration="171000" />
+      <workItem from="1701861799352" duration="595000" />
+      <workItem from="1701885569287" duration="3606000" />
+      <workItem from="1701970287081" duration="2097000" />
+      <workItem from="1702018112025" duration="1684000" />
+      <workItem from="1704796681105" duration="43000" />
+      <workItem from="1705667666724" duration="29764000" />
+    </task>
+    <task id="LOCAL-00001" summary="fix carousel">
+      <option name="closed" value="true" />
+      <created>1701898216369</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1701898216369</updated>
+    </task>
+    <task id="LOCAL-00002" summary="autorizacia">
+      <option name="closed" value="true" />
+      <created>1705685609182</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1705685609182</updated>
+    </task>
+    <task id="LOCAL-00003" summary="dorobenie malickost">
+      <option name="closed" value="true" />
+      <created>1705705908452</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1705705908452</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fix carousel" />
+    <MESSAGE value="autorizacia" />
+    <MESSAGE value="dorobenie malickost" />
+    <option name="LAST_COMMIT_MESSAGE" value="dorobenie malickost" />
+  </component>
+</project>
