@@ -27,10 +27,10 @@
         <div class="collapse navbar-collapse" id="navbarsExample03">
             <ul class="navbar-nav me-auto mb-2 mb-sm-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php?c=aboutUs&a=index">O nás</a>
+                    <a class="nav-link" href="<?= $link->url("Home.aboutUs") ?>">O nás</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">Predajne/Kontakt</a>
+                    <a class="nav-link" href="<?= $link->url("Home.shops") ?>">Predajne/Kontakt</a>
                 </li>
             </ul>
             <ul class="navbar-nav mb-2 mb-sm-0">

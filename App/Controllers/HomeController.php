@@ -126,4 +126,14 @@ class HomeController extends AControllerBase
         return $this->html();
     }
 
+    public function aboutUs(): Response
+    {
+        return $this->html();
+    }
+
+    public function shops(): Response
+    {
+        return $this->html();
+    }
+
 }
