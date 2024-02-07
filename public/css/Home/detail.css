@@ -1,0 +1,45 @@
+.body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+.product-details {
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+}
+h2 {
+    color: #333;
+}
+p {
+    color: #666;
+}
+.product-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+.button{
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button.back {
+    background-color: black;
+    margin-right: 50px ;
+}
+
+.button.add-to-cart {
+    background-color: black;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}

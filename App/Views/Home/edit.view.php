@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="/public/css/Home/add.css">
 <body>
 
-<h2>Vytvorenie položky</h2>
+<h2>Upravenie položky</h2>
 
 <form  method="post">
 
@@ -33,4 +33,3 @@
 </form>
 
 </body>
-</html>

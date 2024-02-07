@@ -3,12 +3,12 @@
 <?php
 /** @var Array $data */
 /** @var \App\Core\IAuthenticator $auth */
-//print_r($data["tps"]);exit();
 ?>
 <link rel="stylesheet" href="/public/css/Home/products.css">
 
 <body>
 
+<button onclick="window.history.back();" class="btn btn-outline-dark mt-auto">Späť</button>
 <div class="container mt-5">
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-5 g-4">
         <?php foreach ($data["products"] as $product): ?>
@@ -25,7 +25,7 @@
                 </div>
                 <!-- Product actions-->
                 <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Prejsť na detail</a></div>
+                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="index.php?c=home&a=detail&id=<?= $product["id"] ?>">Prejsť na detail</a></div>
                 </div>
                 <?php if($auth->getUserRole() == 1): ?>
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
@@ -55,4 +55,3 @@
         <script src="/public/js/delete.js"></script>
 
 </body>
-</html>

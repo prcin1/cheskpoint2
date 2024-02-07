@@ -97,7 +97,23 @@ class HomeController extends AControllerBase
             header('Location: index.php?c=home&a=products&id='.$prod->getDruh_id());
             exit;
         }
+        return $this->html([
+            'types' => $tps,
+            'product' => $prod->jsonSerialize()
+        ]);
+    }
 
+
+    public function detail(): Response{
+        $tps = types::getAll();
+        $tps = array_map(function (types $tp) {
+            return $tp->jsonSerialize();
+        }, $tps);
+        $id = $_GET['id'];
+        $prod = products::getOne($id);
+
+        // update
+      // return  header('Location: index.php?c=home&a=detail&id='.$prod->getDruh_id());
         return $this->html([
             'types' => $tps,
             'product' => $prod->jsonSerialize()
@@ -122,6 +138,11 @@ class HomeController extends AControllerBase
      * @return \App\Core\Responses\ViewResponse
      */
     public function contact(): Response
+    {
+        return $this->html();
+    }
+
+    public function editUser(): Response
     {
         return $this->html();
     }

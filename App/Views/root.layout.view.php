@@ -35,6 +35,11 @@
             </ul>
             <ul class="navbar-nav mb-2 mb-sm-0">
                 <li class="nav-item">
+                    <?php if($auth->getUserRole() == 1): ?>
+                        <a class="nav-link" href="<?= $link->url("Home.editUser") ?>">Spravovať účet </a>
+                    <?php endif; ?>
+                </li>
+                <li class="nav-item">
                     <?php if($auth->isLogged()): ?>
                         <a class="nav-link" href="#">Košík <i class="bi bi-basket"></i></a>
                     <?php endif; ?>
@@ -58,8 +63,8 @@
 <footer class="py-3 my-4">
     <ul class="nav justify-content-center border-bottom pb-3 mb-3">
         <li class="nav-item"><a href="index.php?c=home" class="nav-link px-2 text-body-secondary">Domov</a></li>
-        <li class="nav-item"><a href="Onas.html" class="nav-link px-2 text-body-secondary">O nás</a></li>
-        <li class="nav-item"><a href="Predajne.html" class="nav-link px-2 text-body-secondary">Predajne/Kontakt</a></li>
+        <li class="nav-item"><a href="<?= $link->url("Home.aboutUs") ?>" class="nav-link px-2 text-body-secondary">O nás</a></li>
+        <li class="nav-item"><a href="<?= $link->url("Home.shops") ?>" class="nav-link px-2 text-body-secondary">Predajne/Kontakt</a></li>
     </ul>
     <p class="text-center text-body-secondary">© 2023 Company, Inc</p>
 </footer>
