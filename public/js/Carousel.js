@@ -5,5 +5,3 @@ document.addEventListener("DOMContentLoaded", function () {
         interval: 200
     });
 });
-
-

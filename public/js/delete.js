@@ -12,3 +12,4 @@ function deleteProduct(product_id){
         });
     }
 }
+//urobit mazanie rovnako ako basket.js

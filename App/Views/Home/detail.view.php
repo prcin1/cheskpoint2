@@ -8,6 +8,7 @@
     <title>Detail produktu</title>
 </head>
 <link rel="stylesheet" href="/public/css/Home/detail.css">
+<script src="/public/js/detail.js"></script>
 <body>
 
 <div class="product-details">
@@ -26,7 +27,9 @@
         <button onclick="window.history.back();" class="button back">Späť</button>
 
         <?php if($auth->isLogged()): ?>
-            <button type="submit" class="button add-to-cart">Vložiť do košíka</button>
+            <button class="btn btn-outline-dark mt-auto" id="add-to-cart" onclick="addToCart(<?= $data['product']["id"] ?>)">
+                Vložiť
+            </button>
         <?php endif; ?>
 
     </div>

@@ -6,30 +6,21 @@
 <link rel="stylesheet" href="/public/css/Home/add.css">
 <body>
 
-<h2>Spravovanie účtu</h2>
+<h2>Upravenie položky</h2>
 
 <form  method="post">
 
-    <label for="user">Použivateľ:</label><br>
+    <label for="name">login:</label><br>
+    <input type="text" id="name" name="login" required value="<?= $data['user']["login"]?>" ><br><br>
 
-    <select id="user" name="user">
-        <?php foreach ($data["users"] as $users): ?>
-            <option value="<?= $users["login"] ?>"  ></option>
+    <label for="type">Rola:</label><br>
+    <select id="type" name="role">
+        <?php foreach ($data["roles"] as $role): ?>
+            <option value="<?= $role["id"] ?>" <?= $role["id"]==$data["user"]["roleId"]?"selected":"" ?>><?= $role["name"] ?></option>
         <?php endforeach; ?>
     </select><br><br>
 
-
-    <?php foreach ($data["types"] as $type): ?>
-        <option value="<?= $type["id"] ?>" <?= $type["id"]==$data['product']["druh_id"]?"selected":"" ?>><?= $type["nazov"] ?></option>
-    <?php endforeach; ?>
-
-    <label for="name">Heslo:</label><br>
-    <input type="text" placeholder="Zadajte Heslo" id="pasw" name="pasw"><br><br>
-
-    <label for="description">Zopakuj heslo</label><br>
-    <input type="text" placeholder="Zopakujte Heslo" id="pasw_repeat" name="pasw_repeat"><br><br>
-
-    <input type="submit" name="submit" value="Zmeniť">
+    <input type="submit" name="submit" value="Upraviť">
 </form>
 
 </body>

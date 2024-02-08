@@ -36,12 +36,12 @@
             <ul class="navbar-nav mb-2 mb-sm-0">
                 <li class="nav-item">
                     <?php if($auth->getUserRole() == 1): ?>
-                        <a class="nav-link" href="<?= $link->url("Home.editUser") ?>">Spravovať účet </a>
+                        <a class="nav-link" href="<?= $link->url("Home.user") ?>">Spravovať účet </a>
                     <?php endif; ?>
                 </li>
                 <li class="nav-item">
                     <?php if($auth->isLogged()): ?>
-                        <a class="nav-link" href="#">Košík <i class="bi bi-basket"></i></a>
+                        <a class="nav-link" href="<?= $link->url("Home.basket") ?>">Košík <i class="bi bi-basket"></i></a>
                     <?php endif; ?>
                 </li>
                 <li class="nav-item">

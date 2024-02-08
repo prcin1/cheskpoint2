@@ -4,7 +4,9 @@ namespace App\Controllers;
 use App\Core\AControllerBase;
 use App\Core\Responses\Response;
 use App\Models\products;
+use App\Models\role;
 use App\Models\types;
+use App\Models\users;
 
 /**
  * Class HomeController
@@ -103,6 +105,30 @@ class HomeController extends AControllerBase
         ]);
     }
 
+    public function editUser(): Response{
+
+        $id = $_GET['id'];
+        $user = users::getOne($id);
+        $roles = role::getAll();
+        $roles = array_map(function (role $role) {
+            return $role->jsonSerialize();
+        }, $roles);
+
+        // update
+        if (isset($_POST['submit']) && isset($_POST['login']) && isset($_POST['role']) ) {
+            $user->setLogin($_POST['login']);
+            $user->setRoleId($_POST['role']);
+            $user->save();
+
+            header('Location: index.php?c=home&a=user');
+            exit;
+        }
+        return $this->html([
+            'roles' => $roles,
+            'user' => $user->jsonSerialize()
+        ]);
+    }
+
 
     public function detail(): Response{
         $tps = types::getAll();
@@ -142,9 +168,15 @@ class HomeController extends AControllerBase
         return $this->html();
     }
 
-    public function editUser(): Response
+    public function user(): Response
     {
-        return $this->html();
+        $users = users::getAll();
+        $users = array_map(function (users $user) {
+            return $user->jsonSerialize();
+        }, $users);
+        return $this->html([
+            "users" => $users
+        ]);
     }
 
     public function aboutUs(): Response
@@ -157,4 +189,52 @@ class HomeController extends AControllerBase
         return $this->html();
     }
 
+    public function basket(): Response
+    {
+        if (isset($_SESSION["basket"])) {
+            $products = array();
+            foreach ($_SESSION["basket"] as $item ){
+                $product = products::getOne($item);
+                $products[]=$product;
+            }
+            $products = array_map(function (products $product) {
+                return $product->jsonSerialize();
+            }, $products);
+            return $this->html(["products" => $products]);
+        }
+        return $this->html();
+    }
+
+    public function ajaxAddToCart(): Response
+    {
+        //kontrola na strane servera
+        if(isset($_POST['productId'])){
+            if (!isset($_SESSION["basket"])) {
+                $_SESSION["basket"]=array();
+            }
+            array_push($_SESSION["basket"],$_POST['productId']);
+            $data = ["status" => 200];
+            return $this->json($data);
+        } else {
+            $data = ["status" => -1];
+            return $this->json($data);
+        }
+    }
+
+    public function ajaxDeleteFromCart(): Response
+    {
+        //kontrola na strane servera
+        if(isset($_POST['productId'])){
+            if (isset($_SESSION["basket"])) {
+                if (($key = array_search($_POST['productId'], $_SESSION['basket'])) !== false) {
+                    unset($_SESSION['basket'][$key]);
+                }
+            }
+            $data = ["status" => 200];
+            return $this->json($data);
+        } else {
+            $data = ["status" => -1];
+            return $this->json($data);
+        }
+    }
 }
