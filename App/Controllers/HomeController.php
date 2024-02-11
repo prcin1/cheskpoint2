@@ -219,7 +219,7 @@ class HomeController extends AControllerBase
             $data = ["status" => "Položka bola odstránená!"];
             return $this->json($data);
         } else {
-            $data = ["status" => -1];
+            $data = ["status" => "Položka nebola odstránená!"];
             return $this->json($data);
         }
     }

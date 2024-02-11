@@ -8,6 +8,9 @@ function deleteProduct(product_id, deletedButton){
             success: function(data){
                 deletedButton.closest('.product').remove();
                alert("Položka bola ostránená")
+            },
+            error: function(data) {
+                alert("Položka nebola Odstránená");
             }
         });
     }

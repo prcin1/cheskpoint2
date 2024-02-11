@@ -8,6 +8,9 @@ function deleteUser(userId, deleteUser){
             success: function(data){
                 deleteUser.closest('.user').remove();
                alert("Poiživateľ bol ostránený")
+            },
+            error: function(data) {
+                alert("Používateľ nebol Odstránený");
             }
         });
     }
