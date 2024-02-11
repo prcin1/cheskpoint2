@@ -27,9 +27,9 @@
                 <a href="https://connectionsgame.org/">Connections NYT</a>
             </div>
             <style>
-                .mapouter{position:relative;text-align:right;width:563px;height:383px;}
-                .gmap_canvas {overflow:hidden;background:none!important;width:563px;height:383px;}
-                .gmap_iframe {width:563px!important;height:383px!important;}
+                .mapouter{position:relative;text-align:right;width:100%;height:383px;}
+                .gmap_canvas {overflow:hidden;background:none!important;width:100%;height:100%;}
+                .gmap_iframe {width:100%!important;height:100%!important;}
             </style>
         </div>
     </div>

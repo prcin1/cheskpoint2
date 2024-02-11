@@ -1,4 +1,4 @@
-function deleteProduct(product_id){
+function deleteProduct(product_id, deletedButton){
     //e.preventDefault();
     if (confirm("Naozaj chcete vymazať?")){
         $.ajax({
@@ -6,10 +6,9 @@ function deleteProduct(product_id){
             url:'index.php?c=home&a=ajaxDelete',
             data:{productId:product_id},
             success: function(data){
-               console.log(data);
-               location.reload();
+                deletedButton.closest('.product').remove();
+               alert("Položka bola ostránená")
             }
         });
     }
 }
-//urobit mazanie rovnako ako basket.js

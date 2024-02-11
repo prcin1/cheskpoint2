@@ -12,7 +12,7 @@
 <body>
 
 <div class="product-details">
-    <img src="<?= $data['product']["cesta"] ?>" alt="Product Image" class="product-image">
+    <img src="<?= $data['product']["cesta"] ?>" style="width: 100%" alt="Product Image" class="product-image">
     <h2><?= $data['product']["nazov"] ?></h2>
     <p><strong>Cena:</strong> <?= $data['product']["cena"] ?>€</p>
     <p><strong>Popis:</strong> <?= $data['product']["popis"] ?> </p>
@@ -23,17 +23,14 @@
                 <?= $type["nazov"] ?>
             <?php endif; ?>
         <?php endforeach; ?> </p>
-    <div class="button-container">
-        <button onclick="window.history.back();" class="button back">Späť</button>
 
+    <div class="button-container " >
+        <button onclick="window.history.back();" class="btn btn-outline-dark back">Späť</button>
         <?php if($auth->isLogged()): ?>
-            <button class="btn btn-outline-dark mt-auto" id="add-to-cart" onclick="addToCart(<?= $data['product']["id"] ?>)">
+            <button class="btn btn-outline-dark back" style="margin-left: 2px; " onclick="addToCart(<?= $data['product']["id"] ?>)">
                 Vložiť
             </button>
         <?php endif; ?>
-
     </div>
 </div>
-
 </body>
-</html>

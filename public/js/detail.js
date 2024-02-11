@@ -7,9 +7,7 @@ function addToCart(product_id) {
             alert("Úspešne pridané do košíka!");
         },
         error: function(data) {
-            alert(data.status);
+            alert("Neúspešne pridané do košíka");
         }
     });
 };
-
-//zmenit allerty na hlasky

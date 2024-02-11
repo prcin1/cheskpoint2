@@ -146,19 +146,6 @@ class HomeController extends AControllerBase
         ]);
     }
 
-    public function ajaxDelete(): Response{
-//kontrola na strane servera
-        if(isset($_POST['productId'])){
-            $prod = products::getOne($_POST['productId']);
-            $druhId = $prod->getDruh_id();
-            $prod->delete();
-            $data = ["status" => 1, "druhId" => $druhId];
-            return $this->json($data);
-        } else {
-            $data = ["status" => -1];
-            return $this->json($data);
-        }
-    }
     /**
      * Example of an action accessible without authorization
      * @return \App\Core\Responses\ViewResponse
@@ -191,8 +178,8 @@ class HomeController extends AControllerBase
 
     public function basket(): Response
     {
+        $products = array();
         if (isset($_SESSION["basket"])) {
-            $products = array();
             foreach ($_SESSION["basket"] as $item ){
                 $product = products::getOne($item);
                 $products[]=$product;
@@ -200,9 +187,8 @@ class HomeController extends AControllerBase
             $products = array_map(function (products $product) {
                 return $product->jsonSerialize();
             }, $products);
-            return $this->html(["products" => $products]);
         }
-        return $this->html();
+        return $this->html(["products" => $products]);
     }
 
     public function ajaxAddToCart(): Response
@@ -230,11 +216,40 @@ class HomeController extends AControllerBase
                     unset($_SESSION['basket'][$key]);
                 }
             }
-            $data = ["status" => 200];
+            $data = ["status" => "Položka bola odstránená!"];
             return $this->json($data);
         } else {
             $data = ["status" => -1];
             return $this->json($data);
         }
     }
+
+    public function ajaxDelete(): Response{
+        //kontrola na strane servera
+        if(isset($_POST['productId'])){
+            $prod = products::getOne($_POST['productId']);
+            $druhId = $prod->getDruh_id();
+            $prod->delete();
+            $data = ["status" => 1, "druhId" => $druhId];
+            return $this->json($data);
+        } else {
+            $data = ["status" => -1];
+            return $this->json($data);
+        }
+    }
+
+    public function ajaxDeleteUser(): Response{
+        //kontrola na strane servera
+        if(isset($_POST['id'])){
+            $user = users::getOne($_POST['id']);
+            $userId = $user->getId();
+            $user->delete();
+            $data = ["status" => 1, "userId" => $userId];
+            return $this->json($data);
+        } else {
+            $data = ["status" => -1];
+            return $this->json($data);
+        }
+    }
+
 }

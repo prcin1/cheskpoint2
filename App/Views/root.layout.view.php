@@ -16,7 +16,6 @@
 </head>
 
 <body>
-
 <nav class="navbar navbar-expand-sm navbar-transparent bg-transparent" aria-label="Third navbar example">
     <div class="container-fluid">
         <a class="navbar-brand " href="index.php?c=home" >Mastodontný obchod</a>

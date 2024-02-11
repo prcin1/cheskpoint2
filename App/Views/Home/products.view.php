@@ -4,7 +4,11 @@
 /** @var Array $data */
 /** @var \App\Core\IAuthenticator $auth */
 ?>
+
+<head>
 <link rel="stylesheet" href="/public/css/Home/products.css">
+<script src="/public/js/delete.js"></script>
+</head>
 
 <body>
 
@@ -17,11 +21,12 @@
                 <!-- Sale badge-->
                 <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem"><?= $product["cena"] ?> €</div>
                 <!-- Product image-->
-                <img class="card-img-top" src=<?= $product["cesta"] ?> alt="...">
+                <img class="card-img-top" style="height: 200px"  src=<?= $product["cesta"] ?> alt="...">
                 <!-- Product details-->
                 <div class="card-body p-4">
                     <div class="text-center">
                     </div>
+                    <h4><?= $product["nazov"] ?></h4>
                 </div>
                 <!-- Product actions-->
                 <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
@@ -33,7 +38,7 @@
                     </div>
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                         <div class="text-center">
-                            <button class="btn btn-outline-dark mt-auto" id="btn_delete_<?= $product["id"] ?>" onclick="deleteProduct(<?= $product["id"] ?>)">
+                            <button class="btn btn-outline-dark mt-auto" id="btn_delete_<?= $product["id"] ?>" onclick="deleteProduct(<?= $product["id"] ?>, $(this))">
                                 Zmazať
                             </button>
                         </div>
@@ -49,9 +54,4 @@
                 <button class="btn btn-warning px-3 center"  type="button">Pridať</button>
             </a>
         <?php endif; ?>
-
-
-
-        <script src="/public/js/delete.js"></script>
-
 </body>

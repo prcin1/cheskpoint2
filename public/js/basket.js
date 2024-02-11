@@ -7,11 +7,10 @@ function deleteFromCart(product_id, deletedButton){
             data:{productId:product_id},
             success: function(data) {
                 deletedButton.closest('.product').remove();
-                alert(data.status);
-
+                alert("Položka bola odstránená!");
             },
             error: function(data) {
-                alert(data.status);
+                alert("Položka nebola Odstránená");
             }
         });
     }

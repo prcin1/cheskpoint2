@@ -48,6 +48,7 @@ class AuthController extends AControllerBase
         $logged = null;
 
         if (isset($formData['register'])) {
+            $logged = (isset($_SESSION['user']) && $_SESSION['user'] != null);
             $login = $formData["login"];
             if($formData["psw"]!=$formData["psw_repeat"]){
                 $data = ['message' => 'heslá sa nezhodujú'];
@@ -66,8 +67,10 @@ class AuthController extends AControllerBase
                 $newUser->setPassword($psw);
                 $newUser->setRoleId(2);
                 $newUser->save();
-
                 $data = ['message' => 'Registrácia úspešná'];
+                if($logged){
+                    return $this->redirect($this->url("Home.user"));
+                }
                 return $this->html($data, "login");
         }
 

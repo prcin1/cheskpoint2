@@ -4,20 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e649dd98-dd52-438c-af58-6d7ecb99e7b1" name="Changes" comment="detail produktu">
-      <change afterPath="$PROJECT_DIR$/App/Views/Home/basket.view.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App/Views/Home/user.view.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/Home/basket.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/basket.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/detail.js" afterDir="false" />
+    <list default="true" id="e649dd98-dd52-438c-af58-6d7ecb99e7b1" name="Changes" comment="crud nad druhou entitou ajaxi">
+      <change afterPath="$PROJECT_DIR$/public/images/11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/deleteUser.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controllers/AuthController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Views/Home/basket.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Home/basket.view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Views/Home/detail.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Home/detail.view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Views/Home/editUser.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Home/editUser.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Views/Home/index.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Home/index.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Views/Home/products.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Home/products.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Views/Home/shops.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Home/shops.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Views/Home/user.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Home/user.view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Views/root.layout.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/root.layout.view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/Home/detail.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/Home/detail.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/Home/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/Home/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/Home/products.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/Home/products.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/Carousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/Carousel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/basket.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/basket.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/delete.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/delete.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/detail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/script.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +79,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/PC/PhpstormProjects/cheskpoint2/App/Views/Home",
+    "last_opened_file_path": "C:/Users/PC/PhpstormProjects/cheskpoint2/public/js",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -82,17 +90,17 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\PC\PhpstormProjects\cheskpoint2\App\Views\Home" />
       <recent name="C:\Users\PC\PhpstormProjects\cheskpoint2\public\js" />
+      <recent name="C:\Users\PC\PhpstormProjects\cheskpoint2\App\Views\Home" />
       <recent name="C:\Users\PC\PhpstormProjects\cheskpoint2\public\css\Home" />
       <recent name="C:\Users\PC\PhpstormProjects\cheskpoint2\public\css\Auth" />
       <recent name="C:\Users\PC\PhpstormProjects\cheskpoint2\public\css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\PC\PhpstormProjects\cheskpoint2\public\images" />
       <recent name="C:\Users\PC\PhpstormProjects\cheskpoint2\App\Views\Home" />
       <recent name="C:\Users\PC\PhpstormProjects\cheskpoint2\App\Views\AboutUs" />
       <recent name="C:\Users\PC\PhpstormProjects\cheskpoint2\App\Views" />
-      <recent name="C:\Users\PC\PhpstormProjects\cheskpoint2\public\images" />
       <recent name="C:\Users\PC\PhpstormProjects\cheskpoint2\public\css\Auth" />
     </key>
   </component>
@@ -126,7 +134,7 @@
       <workItem from="1702018112025" duration="1684000" />
       <workItem from="1704796681105" duration="43000" />
       <workItem from="1705667666724" duration="30448000" />
-      <workItem from="1707314682169" duration="32150000" />
+      <workItem from="1707314682169" duration="49891000" />
     </task>
     <task id="LOCAL-00001" summary="fix carousel">
       <option name="closed" value="true" />
@@ -176,7 +184,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707339790416</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="crud nad druhou entitou ajaxi">
+      <option name="closed" value="true" />
+      <created>1707407390726</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1707407390726</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,6 +214,7 @@
     <MESSAGE value="autorizacia" />
     <MESSAGE value="dorobenie malickost" />
     <MESSAGE value="detail produktu" />
-    <option name="LAST_COMMIT_MESSAGE" value="detail produktu" />
+    <MESSAGE value="crud nad druhou entitou ajaxi" />
+    <option name="LAST_COMMIT_MESSAGE" value="crud nad druhou entitou ajaxi" />
   </component>
 </project>

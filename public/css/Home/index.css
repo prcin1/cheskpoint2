@@ -8,11 +8,7 @@
     height: 800px;
 }
 
-.title{
-    text-align: center;
-    font-size: 60px;
-    color: black;
-}
+
 
 .carousel-inner {
     transition-duration: 3s; /* Zmena rýchlosti na 3 sekundy */

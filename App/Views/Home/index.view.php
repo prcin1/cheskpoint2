@@ -2,15 +2,13 @@
 /** @var Array $data */
 //print_r($data["tps"]);exit();
 ?>
-<link rel="stylesheet" href="/public/css/Home/index.css">
-<script src="/public/js/Carousel.js"></script>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <title>Bootstrap Carousel</title>
+    <link rel="stylesheet" href="/public/css/Home/index.css">
+    <script src="/public/js/Carousel.js"></script>
 </head>
 
 <body>
